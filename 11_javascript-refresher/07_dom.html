@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Favorite Color</title>
+</head>
+<body>
+  <button id="bgButton">What is your favorite color?</button>
+
+  <p id="colorDisplay"></p>
+  <p id="timeoutMessage"></p>
+
+  <script>
+    document.getElementById("bgButton").addEventListener("click", function () {
+      const favoriteColor = prompt("What is your favorite color?");
+
+      if (favoriteColor) {
+        document.body.style.backgroundColor = favoriteColor;
+        document.getElementById("colorDisplay").textContent =
+          "Your favorite color is: " + favoriteColor;
+
+        setTimeout(function () {
+          document.getElementById("timeoutMessage").textContent =
+            "This message appears after 2 seconds";
+        }, 2000);
+      }
+    });
+  </script>
+</body>
+</html>
