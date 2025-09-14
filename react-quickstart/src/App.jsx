@@ -32,6 +32,12 @@ function App() {
     message = "Hi";
   }
 
+  const products = [
+    { title: 'Apple', id: 1 },
+    { title: 'Banana', id: 2 },
+    { title: 'Mango', id: 3 },
+  ];
+
   return (
   <>
 
@@ -50,6 +56,11 @@ function App() {
 
     <MyButton />
     <AboutPage />
+    <ul>
+      {products.map(product => (
+        <li key={product.id}>{product.title}</li>
+      ))}
+    </ul>
   </>
   )
 }
