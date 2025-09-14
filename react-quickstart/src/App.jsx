@@ -1,5 +1,14 @@
 import './App.css'
 
+function AboutPage() {
+  return (
+    <>
+      <h1>About</h1>
+      <p>Good Day! <break />How are you?</p>
+    </>
+  )
+}
+
 function MyButton() {
   return (
     <>
@@ -12,6 +21,7 @@ function App() {
   return (
     <>
       <MyButton/>
+      <AboutPage/>
     </>
   )
 }
