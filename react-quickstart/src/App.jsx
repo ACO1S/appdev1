@@ -23,8 +23,20 @@ function MyButton() {
 }
 
 function App() {
+  const isTrue = true;
+
+  let message;
+  if (isTrue) {
+    message = "Hello";
+  } else {
+    message = "Hi";
+  }
+
   return (
   <>
+
+    <h1>{message}</h1>
+
     <img
       className="picture"
       src={user.imageUrl}
@@ -35,7 +47,7 @@ function App() {
         margin: '0 auto 20px'
       }}
     />
-    
+
     <MyButton />
     <AboutPage />
   </>
