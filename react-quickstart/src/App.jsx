@@ -2,16 +2,16 @@ import './App.css'
 
 function MyButton() {
   return (
-    <button>I'm a button</button>
-  );
+    <>
+    <button>Click Me</button>
+    </>
+  )
 }
-
 
 function App() {
   return (
     <>
-    <h1>Welcome to my app</h1>
-    <MyButton/>
+      <MyButton/>
     </>
   )
 }
