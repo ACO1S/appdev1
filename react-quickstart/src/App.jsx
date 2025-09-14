@@ -1,5 +1,10 @@
 import './App.css'
 
+const user = {
+  imageUrl: 'https://i.imgur.com/yXOvdOSs.jpg',
+  imageSize: 100
+};
+
 function AboutPage() {
   return (
     <>
@@ -19,10 +24,21 @@ function MyButton() {
 
 function App() {
   return (
-    <>
-      <MyButton/>
-      <AboutPage/>
-    </>
+  <>
+    <img
+      className="picture"
+      src={user.imageUrl}
+      style={{
+        width: user.imageSize,
+        height: user.imageSize,
+        display: 'block',
+        margin: '0 auto 20px'
+      }}
+    />
+    
+    <MyButton />
+    <AboutPage />
+  </>
   )
 }
 
