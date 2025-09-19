@@ -1,66 +1,22 @@
 import './App.css'
 
-const user = {
-  imageUrl: 'https://i.imgur.com/yXOvdOSs.jpg',
-  imageSize: 100
-};
-
-function AboutPage() {
-  return (
-    <>
-      <h1>About</h1>
-      <p>Good Day! <break />How are you?</p>
-    </>
-  )
-}
-
 function MyButton() {
+  function handleClick() {
+    alert('Hello, User!');
+  }
+
   return (
-    <>
-    <button className="button">Click Me</button>
-    </>
-  )
+    <button onClick={handleClick}>
+      Click me
+    </button>
+  );
 }
 
 function App() {
-  const isTrue = true;
-
-  let message;
-  if (isTrue) {
-    message = "Hello";
-  } else {
-    message = "Hi";
-  }
-
-  const products = [
-    { title: 'Apple', id: 1 },
-    { title: 'Banana', id: 2 },
-    { title: 'Mango', id: 3 },
-  ];
 
   return (
   <>
-
-    <h1>{message}</h1>
-
-    <img
-      className="picture"
-      src={user.imageUrl}
-      style={{
-        width: user.imageSize,
-        height: user.imageSize,
-        display: 'block',
-        margin: '0 auto 20px'
-      }}
-    />
-
-    <MyButton />
-    <AboutPage />
-    <ul>
-      {products.map(product => (
-        <li key={product.id}>{product.title}</li>
-      ))}
-    </ul>
+    <MyButton/>
   </>
   )
 }
