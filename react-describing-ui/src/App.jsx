@@ -1,20 +1,28 @@
 import './App.css'
 
+const person = {
+  name: 'Gregorio Y. Zara',
+  theme: {
+    backgroundColor: 'black',
+    color: 'pink'
+  }
+};
+
 export default function TodoList() {
   return (
-    <>
-      <h1>2025 HIT SONG</h1>
+    <div style={person.theme}>
+      <h1>{person.name}'s Todos</h1>
       <img
-        src="https://i.scdn.co/image/ab67616d00001e02394048503e3be0e65e962638"
-        alt="Multo"
-        className="photo"
+        className="avatar"
+        src="https://i.imgur.com/7vQD0fPs.jpg"
+        alt="Gregorio Y. Zara"
       />
       <ul>
-        <li>MULTO</li>
-        <li>Cup of Joe</li>
-        <li>Song of the Year</li>
+        <li>Improve the videophone</li>
+        <li>Prepare aeronautics lectures</li>
+        <li>Work on the alcohol-fuelled engine</li>
       </ul>
-    </>
+    </div>
   );
 }
 
