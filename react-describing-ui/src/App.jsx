@@ -1,32 +1,25 @@
-import './App.css'
+import { people } from './data.jsx';
+import { getImageUrl } from './utils.jsx';
 
-function Item({ name, isPacked }) {
-  return (
-    <li className="item">
-      {name} {isPacked && '✅'}
+export default function List() {
+  const listItems = people.map(person =>
+    <li key={person.id}>
+      <img
+        src={getImageUrl(person)}
+        alt={person.name}
+      />
+      <p>
+        <b>{person.name}:</b>
+        {' ' + person.profession + ' '}
+        known for {person.accomplishment}
+      </p>
     </li>
   );
-}
-
-export default function PackingList() {
   return (
-    <section>
-      <h1>Song List</h1>
-      <ul>
-        <Item
-          isPacked={true}
-          name="Mutlo"
-        />
-        <Item
-          isPacked={true}
-          name="Favourite Clothes"
-        />
-        <Item
-          isPacked={false}
-          name="Umaasa"
-        />
-      </ul>
-    </section>
+    <article>
+      <h1>Scientists</h1>
+      <ul>{listItems}</ul>
+    </article>
   );
 }
 
