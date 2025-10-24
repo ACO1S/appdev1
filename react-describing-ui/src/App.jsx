@@ -1,15 +1,17 @@
 import './App.css'
 
-function Cup({ guest }) {
-  return <h2>Tea cup for guest #{guest}</h2>;
-}
+import ComponentA from './ComponentA.jsx';
+import ComponentC from './ComponentC.jsx';
 
-export default function TeaSet() {
+function RootComponent() {
   return (
-    <>
-      <Cup guest={1} />
-      <Cup guest={2} />
-      <Cup guest={3} />
-    </>
+    <div>
+      <h1>Root Component</h1>
+      <ComponentA />
+      <ComponentC />
+    </div>
   );
 }
+
+export default RootComponent;
+
